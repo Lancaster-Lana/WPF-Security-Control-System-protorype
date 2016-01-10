@@ -1,0 +1,190 @@
+﻿<base:BasePropertiesControl x:Class="WPFSecurityControlSystem.MODULE.HWConfiguration.Views.NavigationView" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+        xmlns:base="clr-namespace:WPFSecurityControlSystem.Base"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"          
+        xmlns:mainView="clr-namespace:WPFSecurityControlSystem.MODULE.HWConfiguration.Views"                             
+        xmlns:treemodel="clr-namespace:IDenticard.Access.Common;assembly=IDenticard.Access.Common" 
+        xmlns:dal="clr-namespace:WPFSecurityControlSystem.Services" 
+        xmlns:utils="clr-namespace:WPFSecurityControlSystem.Utils"
+        xmlns:ctrlExt="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit.Extended"   
+        xmlns:ctrl="clr-namespace:WPFSecurityControlSystem.MODULE.HWConfiguration.Controls">
+    <UserControl.Resources>
+        <utils:ImageConverter x:Key="imageConverter" />    
+    </UserControl.Resources>
+
+   <TabControl Name="tabCtrlLeftTools" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                        <TabItem Name="tabHW" Header="Hardware" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0">
+                            <!--StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0"-->
+                            <TabItem.Resources>
+                                <HierarchicalDataTemplate x:Name="hwTreeData" x:Key="hwTreeData" ItemsSource="{Binding Children}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Margin="0 0 16 0" Source="{Binding Path=UiId, Converter={StaticResource imageConverter}}" Width="16" Height="16" />
+                                        <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                                        <!--ContentPresenter Margin="0 0 10 0" Content="{Binding Image}" /-->
+                                    </StackPanel>
+                                    <!--HierarchicalDataTemplate.Triggers>
+                                        <DataTrigger Binding="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}" Value="True">
+                                                            <Setter Property="Source" TargetName="Folder" Value="..\..\Images\folder.png" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource TemplatedParent}}"
+                                                            Value="True">
+                                                            <Setter Property="Foreground" TargetName="Name"  Value="White" />
+                                                            <Setter Property="Source" TargetName="Folder" Value="..\..\Images\FolderSelected.png" />
+                                                            <Setter Property="BitmapEffect">
+                                                                <Setter.Value>
+                                                                    <OuterGlowBitmapEffect GlowColor="Black" />
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                        </DataTrigger>
+               
+                                                        <DataTrigger Binding="{Binding Path=Header.Name, RelativeSource={RelativeSource TemplatedParent}}"
+                                                            Value="Music">
+                                                            <Setter Property="Source"
+                                                        TargetName="Folder"
+                                                        Value="/Images/Music.png" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Path=Header.Name, RelativeSource={RelativeSource TemplatedParent}}"  Value="Movies">
+                                                            <Setter Property="Source"
+                                                        TargetName="Folder"
+                                                        Value="/Images/Movie.png" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Path=Header.CategoryName, RelativeSource={RelativeSource TemplatedParent}}"
+                                                            Value="Books">
+                                                            <Setter Property="Source"
+                                                        TargetName="Folder"
+                                                        Value="/Images/Book.png" />
+                                                        </DataTrigger>
+                                    </HierarchicalDataTemplate.Triggers-->
+                                </HierarchicalDataTemplate>
+                                <Style x:Key="hwTreeStyle" TargetType="{x:Type TreeViewItem}">
+                                    <!--Style.Resources>                                   
+                                        <Brush x:Key="{x:Static SystemColors.HighlightBrushKey}">Transparent</Brush>
+                                        <Brush x:Key="{x:Static SystemColors.ControlBrushKey}">Transparent</Brush>
+                                    </Style.Resources-->
+                                    <Setter Property="HeaderTemplate" Value="{StaticResource hwTreeData}" />
+                                </Style>
+                            </TabItem.Resources>
+                            <ctrl:HWConfigurationTree x:Name="treeHWConfiguration" Margin="2"
+                                                    TreeNodeStyle="{StaticResource hwTreeStyle}"       
+                                                    ObserveChildItems="True"
+                                                    Items="{Binding Path=Children}"                                                                                                           
+                                                    Loaded="treeHWConfiguration_Loaded">
+                                <ctrl:HWConfigurationTree.ContextMenu>
+                                    <ContextMenu Name="cmHWTree" StaysOpen="true">
+                                        <MenuItem Header="Add Site" Name="menuAddSite" Command="New" CommandParameter="Site" />
+                                        <MenuItem Header="Edit Site" Name="menuEditSite" Command="Open"  CommandParameter="Site" />
+                                        <MenuItem Header="Delete Site" Name="menuDeleteSite" Command="Delete" CommandParameter="Site" />
+                                        <MenuItem Header="Download Sites" Name="menuDownloadSite" Command="Refresh" CommandParameter="Site"/>
+                                        <Separator/>
+                                        <MenuItem Header="Add Controller" Name="menuAddController" Command="New" CommandParameter="Controller" />
+                                        <MenuItem Header="Edit Controller" Name="menuEditController" Command="Open" CommandParameter="Controller" />
+                                        <MenuItem Header="Delete Controller" Name="menuDeleteController" Command="Delete" CommandParameter="Controller" />
+                                        <Separator/>
+                                        <MenuItem Header="Add IOBoard" Name="menuAddIOBoard" Command="New" CommandParameter="IOBoard"/>
+                                        <MenuItem Header="Edit IOBoard" Name="menuEditIOBoard" Command="Open" CommandParameter="IOBoard" />
+                                        <MenuItem Header="Delete IOBoard" Name="menuDeleteIOBoard" Command="Delete" CommandParameter="IOBoard" />
+                                    </ContextMenu>
+                                </ctrl:HWConfigurationTree.ContextMenu>
+
+                                <!--TreeView Name="treeHWConfiguration" Margin="2"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" -->
+                                <!--TreeView.ItemContainerStyle>
+                                    <Style TargetType="{x:Type TreeViewItem}">
+                                        <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                                        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                                        <Setter Property="FontWeight" Value="Normal" />                                   
+                                    </Style>
+                                </TreeView.ItemContainerStyle>
+                                <TreeView.ItemTemplate>
+                                    <HierarchicalDataTemplate ItemsSource="{Binding Children}" >
+                                        <StackPanel Orientation="Horizontal">                                        
+                                            <Image Margin="0 0 16 0" Source="{Binding Path=UiId, Converter={StaticResource imageConverter}}" Width="16" Height="16" />                                                                              
+                                            <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                                        </StackPanel>
+                                    </HierarchicalDataTemplate>
+                                </TreeView.ItemTemplate-->
+                            </ctrl:HWConfigurationTree>
+                        </TabItem>
+                        <TabItem Header="Globals" >
+                            <TreeView Name="treeGlobals" Margin="2"                              
+                                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                                <TreeView.ContextMenu>
+                                    <ContextMenu Name="cmGlobals" StaysOpen="true">
+                                        <MenuItem Header="Add Group" />
+                                        <MenuItem Header="Edit" />
+                                        <MenuItem Header="Delete"/>
+                                    </ContextMenu>
+                                </TreeView.ContextMenu>
+                                <TreeView.ItemTemplate>
+                                    <HierarchicalDataTemplate ItemsSource="{Binding Children}" >
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Margin="0 0 4 0" Source="..\..\Images\folder.png" Width="16" Height="16" />
+                                            <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                                        </StackPanel>
+                                    </HierarchicalDataTemplate>
+                                </TreeView.ItemTemplate>
+                                <TreeView.ItemContainerStyle>
+                                    <Style TargetType="{x:Type TreeViewItem}">
+                                        <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                                        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                                        <Setter Property="FontWeight" Value="Normal" />
+                                    </Style>
+                                </TreeView.ItemContainerStyle>
+                            </TreeView>
+                        </TabItem>
+                        <TabItem Header="Access Settings" >
+                            <TreeView Name="treeAccessSettings" Margin="2"                                    
+                                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                                <TreeView.ContextMenu>
+                                    <ContextMenu StaysOpen="true">
+                                        <MenuItem Header="Add" Name="menuAddAccessSettings" />
+                                        <MenuItem Header="Edit" Name="menuEditAccessSettings" />
+                                        <MenuItem Header="Delete" Name="menuDeleteAccessSettings" />
+                                    </ContextMenu>
+                                </TreeView.ContextMenu>
+                                <TreeView.ItemTemplate>
+                                    <HierarchicalDataTemplate ItemsSource="{Binding Children}" >
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Margin="0 0 4 0" Source="..\..\Images\folder.png" Width="16" Height="16" />
+                                            <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                                        </StackPanel>
+                                    </HierarchicalDataTemplate>
+                                </TreeView.ItemTemplate>
+                                <TreeView.ItemContainerStyle>
+                                    <Style TargetType="{x:Type TreeViewItem}">
+                                        <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                                        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                                        <Setter Property="FontWeight" Value="Normal" />
+                                    </Style>
+                                </TreeView.ItemContainerStyle>
+                            </TreeView>
+                        </TabItem>
+                        <TabItem Header="Devices" >
+                        <TreeView Name="treeDevices" Margin="2"                                    
+                                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                            <TreeView.ContextMenu>
+                                <ContextMenu StaysOpen="true">
+                                    <MenuItem Header="Add Device" Name="menuAddDeviceSettings" />
+                                    <MenuItem Header="Edit Device" Name="menuEditDeviceSettings" />
+                                    <MenuItem Header="Delete Device" Name="menuDeleteDeviceSettings" />
+                                </ContextMenu>
+                            </TreeView.ContextMenu>
+                            <TreeView.ItemTemplate>
+                                <HierarchicalDataTemplate ItemsSource="{Binding Children}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Margin="0 0 4 0" Source="..\..\Images\folder.png" Width="16" Height="16" />
+                                        <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                                    </StackPanel>
+                                </HierarchicalDataTemplate>
+                            </TreeView.ItemTemplate>
+                            <TreeView.ItemContainerStyle>
+                                <Style TargetType="{x:Type TreeViewItem}">
+                                    <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                                    <Setter Property="FontWeight" Value="Normal" />
+                                </Style>
+                            </TreeView.ItemContainerStyle>
+                        </TreeView>
+                    </TabItem>
+                    </TabControl>              
+  
+</base:BasePropertiesControl>

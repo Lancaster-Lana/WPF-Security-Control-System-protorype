@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BIN", "BIN", "{CFE56745-896D-414F-B707-70A108E3ECA3}"
+	ProjectSection(SolutionItems) = preProject
+		BIN\Microsoft.Practices.EnterpriseLibrary.Logging.dll = BIN\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+		..\BIN\Microsoft.Windows.Shell.dll = ..\BIN\Microsoft.Windows.Shell.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controls.WpfUI", "WPF TreeView\Controls.WpfUI.csproj", "{0795CC57-97FD-42C6-AE47-F22F29919100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSecurityControlSystem", "WPFSecurityControlSystem.csproj", "{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DATABASE", "DATABASE", "{47080E20-3616-4814-874D-B7776381F3E5}"
+	ProjectSection(SolutionItems) = preProject
+		..\DATABASE\PremiDB.mdf = ..\DATABASE\PremiDB.mdf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer =
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = UIPrototype\\UIPrototype.csproj
+		SccProjectName1 = UIPrototype
+		SccLocalPath1 = UIPrototype
+		SccProjectUniqueName2 = WPF\u0020TreeView\\IDenticard.WpfUI.csproj
+		SccProjectName2 = WPF\u0020TreeView
+		SccLocalPath2 = WPF\u0020TreeView
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CodeCov|Any CPU = CodeCov|Any CPU
+		CodeCov|Mixed Platforms = CodeCov|Mixed Platforms
+		CodeCov|x86 = CodeCov|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release Plugins|Any CPU = Release Plugins|Any CPU
+		Release Plugins|Mixed Platforms = Release Plugins|Mixed Platforms
+		Release Plugins|x86 = Release Plugins|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.CodeCov|Any CPU.ActiveCfg = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.CodeCov|Any CPU.Build.0 = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.CodeCov|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.CodeCov|Mixed Platforms.Build.0 = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.CodeCov|x86.ActiveCfg = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Release Plugins|Any CPU.ActiveCfg = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Release Plugins|Any CPU.Build.0 = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Release Plugins|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Release Plugins|Mixed Platforms.Build.0 = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Release Plugins|x86.ActiveCfg = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0795CC57-97FD-42C6-AE47-F22F29919100}.Release|x86.ActiveCfg = Release|Any CPU
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.CodeCov|Any CPU.ActiveCfg = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.CodeCov|Mixed Platforms.ActiveCfg = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.CodeCov|Mixed Platforms.Build.0 = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.CodeCov|x86.ActiveCfg = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.CodeCov|x86.Build.0 = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Debug|x86.ActiveCfg = Debug|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Debug|x86.Build.0 = Debug|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Release Plugins|Any CPU.ActiveCfg = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Release Plugins|Mixed Platforms.ActiveCfg = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Release Plugins|Mixed Platforms.Build.0 = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Release Plugins|x86.ActiveCfg = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Release Plugins|x86.Build.0 = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Release|Any CPU.ActiveCfg = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Release|Mixed Platforms.Build.0 = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Release|x86.ActiveCfg = Release|x86
+		{1CED9966-D86F-4BD4-BEC7-DBD868AB4137}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

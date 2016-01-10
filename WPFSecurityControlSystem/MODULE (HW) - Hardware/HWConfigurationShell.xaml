@@ -1,0 +1,113 @@
+﻿<ribbon:RibbonWindow x:Class="WPFSecurityControlSystem.HWConfigurationShell"        
+        Title="PremiSys 3.0 - Hardware Configuration" MinHeight="400" MinWidth="1210"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"       
+        xmlns:commands="clr-namespace:WPFSecurityControlSystem.Commands" 
+        xmlns:local="clr-namespace:WPFSecurityControlSystem"  
+        xmlns:ctrlExt="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit.Extended"   
+        xmlns:ctrl="clr-namespace:WPFSecurityControlSystem.MODULE.HWConfiguration.Controls"
+        xmlns:view="clr-namespace:WPFSecurityControlSystem.MODULE.HWConfiguration.Views" >
+    <!--Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\RibbonTemplate.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources-->
+    <Window.CommandBindings>
+        <!-- bindings for context menu commands -->
+        <CommandBinding Command="New" CanExecute="CanCreate" Executed="AddHardware" />
+        <CommandBinding Command="Open" CanExecute="CanEdit" Executed="EditHardware"/>
+        <CommandBinding Command="Delete" CanExecute="CanDelete" Executed="DeleteHardware" />
+        <!--CommandBinding Command="commands:HWConfigCommands.DownloadCommand"   Executed="Download"  /-->
+        <!--CommandBinding Command="commands:HWConfigCommands.SetDefaultsCommand"  Executed="SetDefaults"  /-->
+        <CommandBinding Command="commands:HWConfigCommands.GenerateDoors"  Executed="GenerateDoorsForController"  />
+    </Window.CommandBindings>
+  
+    <Grid Margin="2" DataContext="{Binding}" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <!--ColumnDefinition Width="3" /-->
+            <ColumnDefinition Width="350*" Name="colCenter" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="23" />
+        </Grid.RowDefinitions>
+
+        <!--Top Menu Area-->
+        <ribbon:Ribbon Name="MainRibbonMenu" Width="Auto" Height="Auto" Grid.ColumnSpan="4">
+                <ribbon:Ribbon.ApplicationMenu>
+                    <ribbon:RibbonApplicationMenu>
+                        <ribbon:RibbonApplicationMenuItem Header="Help"/>
+                        <ribbon:RibbonApplicationMenuItem Header="Close" Click="OnClose"/>
+                    </ribbon:RibbonApplicationMenu>
+                </ribbon:Ribbon.ApplicationMenu>
+                <ribbon:RibbonTab Header="Configure">
+                    <ribbon:RibbonGroup Header="Hardware">
+                        <ribbon:RibbonButton Label="Add" Command="New" LargeImageSource="/Images/config_add.png" />
+                        <ribbon:RibbonButton Label="Edit" Command="Open" LargeImageSource="/Images/config_edit.png" />
+                        <ribbon:RibbonButton Label="Remove" Command="Delete" LargeImageSource="/Images/config_delete.png" />
+                        <ribbon:RibbonButton x:Name="rbtnDownload" Label="Download" LargeImageSource="/Images/config_download.png"  
+                                         Command="{Binding Path=HWConfigCommands.DownloadCommand}" />
+                        <ribbon:RibbonButton x:Name="rbtnSetDefaults"  Label="Set defaults" Width="100"  Height="20"
+                                         Command="{Binding Path=HWConfigCommands.SetDefaultsCommand}" 
+                                         CommandParameter="{Binding Path=CurrentDataContext.CurrentObject}"  />
+                        <!--ribbon:RibbonButton Label="Download" LargeImageSource="/Images/config_download.png"  
+                                         Command="{Binding Path=DownloadCommand}" /-->
+                        <!--ribbon:RibbonButton Label="Set defaults" Width="100" Height="20"
+                                         Command="commands:HWConfigCommands.SetDefaultsCommand" /-->
+                    </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup Header="Globals" >
+                    <ribbon:RibbonButton Label="Add Group" Height="100" Command="{Binding Path=HWConfigCommands.AddGroupCommand}" LargeImageSource="/Images/config_addgroup.png" />
+                    <ribbon:RibbonButton Label="Edit Group" Height="100" Command="{Binding Path=HWConfigCommands.EditGroupCommand}" LargeImageSource="/Images/config_editgroup.png"/>
+                    <ribbon:RibbonButton Label="Delete Group" Height="100" Command="{Binding Path=HWConfigCommands.DeleteGroupCommand}" LargeImageSource="/Images/config_deletegroup.png" />
+                    <ribbon:RibbonButton Label="Remove Doors" Height="100" Command="{Binding Path=HWConfigCommands.RemoveDoorsCommand}" LargeImageSource="/Images/config_removedoors.png"  />
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup Header="Access Settings" >
+                    <ribbon:RibbonButton Label="Add Access" Command="{Binding Path=HWConfigCommands.AddAccessCommand}" LargeImageSource="/Images/config_addaccess.png" />
+                    <ribbon:RibbonButton Label="Edit Access" Command="{Binding Path=HWConfigCommands.EditAccessCommand}" LargeImageSource="/Images/config_editaccess.png" />
+                    <ribbon:RibbonButton Label="Delete Access" Command="{Binding Path=HWConfigCommands.DeleteAccessCommand}" LargeImageSource="/Images/config_deleteaccess.png" />                    
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup Header="Plug-ins" >
+                    <ribbon:RibbonButton Label="Add Plug-in" Command="{Binding Path=HWConfigCommands.AddPluginCommand}" LargeImageSource="/Images/config_addplugin.png" />
+                    <ribbon:RibbonButton Label="Edit Plug-in" Command="{Binding Path=HWConfigCommands.EditPlguinCommand}" LargeImageSource="/Images/config_editplugin.png" />
+                    <ribbon:RibbonButton Label="Delete Plug-in" Command="{Binding Path=HWConfigCommands.DeletePluginCommand}" LargeImageSource="/Images/config_deleteplugin.png" />
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+                <ribbon:RibbonTab Header="Control">
+                </ribbon:RibbonTab>
+                <ribbon:RibbonTab Header="View">
+                </ribbon:RibbonTab>
+         </ribbon:Ribbon>
+
+        <DockPanel Name="pnlLeftTools" Background="LightGray"  Grid.Row="1" Grid.Column="0" MinWidth="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  >
+            <ToggleButton Name="btnHideLeftTools" IsChecked="False" Content=">" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="5" Width="20" Height="20" ToolTip="Hide\Show" Click="btnHideLeftTools_Click" />
+            <Grid Name="pnlLeftTabs" Margin="2" Width="300" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >                
+                <ContentControl x:Name="NavigationRegion" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+                <!--view:NavigationView x:Name="NavigationRegion" Grid.Row="1" Grid.Column="0" Margin="0" Width="300" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" /-->
+             </Grid>
+        </DockPanel>
+        <!--GridSplitter Name="splitterLeft" Grid.Row="1" Grid.Column="1" Width="3" Background="Transparent" HorizontalAlignment="Stretch"  HorizontalContentAlignment="Left" VerticalAlignment="Stretch" ShowsPreview="False" /-->
+
+        <Border Grid.Row="1" Grid.Column="1" Margin="0" Background="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <ContentControl x:Name="ClientArea" Margin="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+        </Border>
+
+        <StackPanel Name="pnlRightTools" Grid.Row="1" Grid.Column="2" Background="LightGray" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MinWidth="30" >
+            <ToggleButton Name="btnHidRightTools" IsChecked="False" DockPanel.Dock="Top" HorizontalAlignment="Right" Content= " " ToolTip="Hide\Show" Margin="5" Width="20" Height="20"  Click="btnHidRightTools_Click" />
+            <ScrollViewer Name="pnlRightAccordionTools" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch">                
+               <ContentControl x:Name="ToolsRegion" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+                <!--view:RightToolboxView x:Name="ToolsRegion" Grid.Row="1" Grid.Column="4" Margin="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" /-->                
+            </ScrollViewer>
+        </StackPanel>
+
+        <Border x:Name="MainRegionBorder" Margin="0" BorderBrush="WhiteSmoke" Grid.Row="2" Grid.ColumnSpan="4" >
+            <StatusBar MinHeight="17" MaxHeight="17" Background="LightGray" VerticalAlignment="Bottom" />
+        </Border>
+    </Grid>
+   
+</ribbon:RibbonWindow>

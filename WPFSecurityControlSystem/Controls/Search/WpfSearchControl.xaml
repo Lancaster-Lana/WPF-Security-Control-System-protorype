@@ -1,0 +1,5 @@
+﻿<UserControl x:Class="WPFSecurityControlSystem.Controls.WpfSearchControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <TextBox Name="_textBoxSearch" LostFocus="_textBoxSearch_LostFocus" GotFocus="_textBoxSearch_GotFocus" TextChanged="_textBoxSearch_TextChanged"></TextBox>
+</UserControl>

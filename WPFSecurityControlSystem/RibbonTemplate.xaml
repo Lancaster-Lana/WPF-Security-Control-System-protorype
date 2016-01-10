@@ -1,0 +1,157 @@
+﻿<ResourceDictionary x:Class="RibbonTemplate" 
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary">
+
+    <!-- Shell RibbonWindow Template -->
+    <ControlTemplate x:Key="ShellWindowTemplate" TargetType="{x:Type Window}">
+        <ControlTemplate.Resources>
+            <GridLength x:Key="BorderWidth">7</GridLength>            
+                <!--ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>                               
+                        <ResourceDictionary Source="Themes\WindowStyle.xaml"/>                      
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary-->                       
+        </ControlTemplate.Resources>
+
+        <Grid x:Name="WindowRoot" Style="{DynamicResource WindowRoot}" >
+            <Border x:Name="WindowFrame" Style="{DynamicResource WindowBorder}">
+                <Grid x:Name="WindowLayout">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="3" />
+                        <ColumnDefinition Width="300*" />
+                        <!--ColumnDefinition Width="5" /-->
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="135" />
+                        <RowDefinition Height="200*" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <!-- The title bar. -->
+                    <Grid Margin="0" VerticalAlignment="Top">
+                        <Border Style="{DynamicResource TitleBarBackgroundBorder}" />
+                        <Image x:Name="IconApp" Margin="10, 0, 0, 0" HorizontalAlignment="Left" Source="{TemplateBinding Icon}"></Image>
+                        <TextBlock Foreground="{DynamicResource TextBrush}" Text="{TemplateBinding Title}" 
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Normal" />
+
+                        <!-- Window state buttons -->
+                        <StackPanel Margin="0,8" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                            <ComboBox Margin="0,0,5,0" Height="16" FontSize="8" Padding="3" 
+                                      SelectedIndex="{Binding Path=Settings[SelectedTheme], Mode=TwoWay, TargetNullValue=2, FallbackValue=2}" >
+                                <!-- Load themes dynamically from Themes\Skins -->
+                                <ComboBoxItem Tag="None">None</ComboBoxItem>
+                                <ComboBoxItem Tag="ShinyBlue">Shiny Blue</ComboBoxItem>
+                                <ComboBoxItem Tag="BureauBlue">Bureau Blue</ComboBoxItem>
+                                <ComboBoxItem Tag="WhistlerBlue">Whistler Blue</ComboBoxItem>
+                                <ComboBoxItem Tag="ExpressionDark">Expression Dark</ComboBoxItem>
+                                <ComboBoxItem Tag="ExpressionLight">Expression Light</ComboBoxItem>
+                            </ComboBox>
+                            <Button Style="{StaticResource MinimizeRadialButton}"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                            <Button Style="{StaticResource MaximizeRadialButton}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,0" />
+                            <Button Style="{StaticResource CloseRadialButton}"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" />
+                        </StackPanel>
+                    </Grid>
+
+                    <!--ribbon:Ribbon x:Name="MainRibbonMenu" Grid.ColumnSpan="4">
+                        <ribbon:Ribbon.ApplicationMenu>
+                            <ribbon:RibbonApplicationMenu>
+                                <ribbon:RibbonApplicationMenuItem Header="Help"/>
+                                <ribbon:RibbonApplicationMenuItem Header="Close" />
+                            </ribbon:RibbonApplicationMenu>
+                        </ribbon:Ribbon.ApplicationMenu>
+                        <ribbon:RibbonTab Header="Configure">
+                            <ribbon:RibbonGroup Header="Hardware">
+                                <ribbon:RibbonButton Label="Add" Command="New" LargeImageSource="/Images/config_add.png" />
+                                <ribbon:RibbonButton Label="Edit" Command="Open" LargeImageSource="/Images/config_edit.png" />
+                                <ribbon:RibbonButton Label="Remove" Command="Delete" LargeImageSource="/Images/config_delete.png" />
+                                <ribbon:RibbonButton Label="Download" LargeImageSource="/Images/config_download.png"   />
+                                <ribbon:RibbonButton x:Name="rbtnSetDefaults"  Label="Set defaults" Width="100" Height="20"/>
+                            </ribbon:RibbonGroup>
+                        </ribbon:RibbonTab>
+                        <ribbon:RibbonTab Header="Control">
+                        </ribbon:RibbonTab>
+                        <ribbon:RibbonTab Header="View">
+                        </ribbon:RibbonTab>
+                    </ribbon:Ribbon-->
+
+                    <ContentControl x:Name="MenuArea" Margin="0" Grid.ColumnSpan="4" Grid.Row="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+                    
+                    <!-- The window content. -->
+                    <Border x:Name="WindowContent" Margin="0" Grid.Row="1" Grid.ColumnSpan="4">
+                        <AdornerDecorator>
+                            <Grid Margin="2" DataContext="{Binding}" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="3" />
+                                    <ColumnDefinition Width="300*" Name="colCenter" />
+                                    <ColumnDefinition Width="3" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <DockPanel Name="pnlLeftTools" MinWidth="300" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="WhiteSmoke" >
+                                    <ToggleButton Name="btnHideLeftTools" IsChecked="False" Content=">" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="5" Width="20" Height="20" ToolTip="Hide\Show" />
+                                    <Grid Name="pnlLeftTabs" Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                                        <ContentPresenter Name="navigationRegion" />
+                                    </Grid>
+                                </DockPanel>
+
+                                <GridSplitter Name="splitterLeft" Grid.Column="1" HorizontalAlignment="Stretch"  HorizontalContentAlignment="Left" VerticalAlignment="Stretch" ShowsPreview="False" />
+
+                                <!--ContentPresenter Name="centralRegion" MinWidth="200" /-->
+                                <ContentControl x:Name="ClientArea" Grid.Column="2"  MinWidth="200" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+
+                                <!--GridSplitter Name="splitterRight"  Grid.Column="3"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalAlignment="Stretch" ShowsPreview="False"  /-->
+
+                                <StackPanel Name="pnlRightTools" Grid.Column="3" MinWidth="30" Width="260" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Background="WhiteSmoke" >
+                                    <ToggleButton Name="btnHidRightTools" IsChecked="False" HorizontalAlignment="Right" Content= " " ToolTip="Hide\Show" Margin="5" Width="20" Height="20"   />
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch">
+                                        <StackPanel Name="pnlRightAccordionTools" Width="260" Background="LightGray" >
+                                            
+                                            <ContentPresenter Name="actionsToolsRegion" MinWidth="200" />
+                                            
+                                        </StackPanel>
+                                    </ScrollViewer>
+                                </StackPanel>
+                            </Grid>
+
+                        </AdornerDecorator>
+                    </Border>
+
+                    <StatusBar DockPanel.Dock="Bottom" Grid.ColumnSpan="4"  Grid.Row="2" Margin="0" Height="30" Background="LightGray" VerticalAlignment="Bottom" />
+
+                    <!-- Grips -->
+                    <!-- Sides -->
+                    <Rectangle x:Name="leftSizeGrip" Style="{StaticResource RectBorderStyle}" Width="7" HorizontalAlignment="Left"/>
+                    <Rectangle x:Name="rightSizeGrip" Style="{StaticResource RectBorderStyle}" Width="7" HorizontalAlignment="Right"/>
+                    <Rectangle x:Name="topSizeGrip" Style="{StaticResource RectBorderStyle}" Height="7" VerticalAlignment="Top"/>
+                    <Rectangle x:Name="bottomSizeGrip" Style="{StaticResource RectBorderStyle}" Height="7" VerticalAlignment="Bottom"/>
+                    <!--Corners -->
+                    <Rectangle Name="topLeftSizeGrip" Style="{StaticResource RectBorderStyle}" Width="7" Height="7" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Rectangle Name="bottomRightSizeGrip" Style="{StaticResource RectBorderStyle}"  Width="7" Height="7" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                    <Rectangle Name="topRightSizeGrip" Style="{StaticResource RectBorderStyle}"  Width="7" Height="7" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                    <Rectangle Name="bottomLeftSizeGrip" Style="{StaticResource RectBorderStyle}"  Width="7" Height="7" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                </Grid>
+            </Border>
+
+        </Grid>
+    </ControlTemplate>
+    <!-- Window Style -->
+
+    <Style x:Key="SkinShellWindowStyle" TargetType="Window">
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="ResizeMode" Value="CanResize" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="MinHeight" Value="150"/>
+        <Setter Property="MinWidth" Value="250"/>
+        <Setter Property="Opacity" Value="1.0" />
+        <Setter Property="Template" Value="{StaticResource ShellWindowTemplate}" />
+
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding WindowState}" Value="Maximized">
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

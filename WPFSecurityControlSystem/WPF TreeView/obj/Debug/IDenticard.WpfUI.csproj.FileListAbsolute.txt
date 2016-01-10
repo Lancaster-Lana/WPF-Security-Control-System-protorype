@@ -1,0 +1,23 @@
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\bin\Debug\IDenticard.WpfUI.dll
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\bin\Debug\IDenticard.WpfUI.pdb
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI_MarkupCompile.cache
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI_MarkupCompile.lref
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\GenericTreeView\Themes\Generic.baml
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI.g.resources
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI.Properties.Resources.resources
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI.dll
+C:\Users\Lana\Desktop\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI.pdb
+G:\! NET PROJECTS\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\bin\Debug\IDenticard.WpfUI.xml
+G:\! NET PROJECTS\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\bin\Debug\IDenticard.WpfUI.dll
+G:\! NET PROJECTS\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\bin\Debug\IDenticard.WpfUI.pdb
+G:\! NET PROJECTS\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI_MarkupCompile.cache
+G:\! NET PROJECTS\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI_MarkupCompile.lref
+G:\! NET PROJECTS\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\GenericTreeView\Themes\Generic.baml
+G:\! NET PROJECTS\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI.g.resources
+G:\! NET PROJECTS\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI.Properties.Resources.resources
+G:\! NET PROJECTS\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI.csproj.GenerateResource.Cache
+G:\! NET PROJECTS\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI.dll
+G:\! NET PROJECTS\PremiSys 3.0 - BEST+\UIPrototype\WPF TreeView\obj\Debug\IDenticard.WpfUI.pdb

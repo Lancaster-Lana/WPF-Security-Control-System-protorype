@@ -1,0 +1,20 @@
+﻿WPFSecurityControlSystem
+
+
+winexe
+C#
+.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\
+WPFSecurityControlSystem
+none
+false
+DEBUG;TRACE
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\App.xaml
+27-205187646
+3-496411741
+432002795510
+341432232249
+Base\BasePropertiesDialog.xaml;Controls\CardFormatsControl.xaml;Controls\ColumnsPickerControl.xaml;Controls\HolidayControl.xaml;Controls\PermissionsControl.xaml;Controls\Search\WpfSearchControl.xaml;Controls\ValidationButton.xaml;MainWindow.xaml;MODULE (HW) - Hardware\Controls\DoorPropertiesControl.xaml;MODULE (HW) - Hardware\Controls\SCPPropertiesControl.xaml;MODULE (HW) - Hardware\Controls\SetDefaultPropertiesControl.xaml;MODULE (HW) - Hardware\Controls\SIOPropertiesControl.xaml;MODULE (HW) - Hardware\Controls\SitePropertiesControl.xaml;MODULE (HW) - Hardware\HWConfigurationShell.xaml;MODULE (HW) - Hardware\Views\NavigationView.xaml;MODULE (HW) - Hardware\Views\MainContentsView.xaml;MODULE (HW) - Hardware\Views\ToolsView.xaml;Themes\HelpButtonTemplate.xaml;RibbonTemplate.xaml;Themes\Skins\BureauBlack.xaml;Themes\Skins\BureauBlue.xaml;Themes\Skins\ExpressionDark.xaml;Themes\Skins\ExpressionLight.xaml;Themes\Skins\None.xaml;Themes\Skins\ShinyBlue.xaml;Themes\Skins\WhistlerBlue.xaml;Themes\WindowStyle.xaml;
+
+False
+

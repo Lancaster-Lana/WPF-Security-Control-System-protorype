@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="WPFSecurityControlSystem.MODULE.HWConfiguration.Views.ToolsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ctrlExt="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit.Extended" >
+    <StackPanel Name="pnlRightAccordionTools" Background="Transparent" Width="270" >
+        <Expander  Width="250" Header="ADD DOORS" IsExpanded="True">
+            <Border Height="300" >
+                <Grid Margin="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="210" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="39" />
+                        <RowDefinition Height="9*" />
+                    </Grid.RowDefinitions>
+                    <Label Name="lblNumberOfDoors" Content="Number of doors:" Height="25" Margin="10,15,102,9" />
+                    <ctrlExt:IntegerUpDown Name="upDoorsCount" Width="50" Height ="20" Value="1" Increment="1" Minimum="1"  Maximum="1000" Margin="100,5,0,0"  />
+                    <Label Name="lblSite" Content="Site:" Grid.Row="1" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" />
+                    <ComboBox Name="cmbSite" Grid.Row="2" Margin="10,0,0,0" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top"                                        
+                                          ItemsSource ="{Binding Sites}"
+                                          SelectedValuePath="SITE_ID"
+                                          SelectionChanged="cmbSite_SelectionChanged"/>
+                    <Button Name="btnAddSite" Grid.Column="2" Grid.Row="2" Style="{DynamicResource ibtnAdd}" ToolTip="Add a new Site" Height="20" HorizontalAlignment="Left" KeyboardNavigation.TabIndex="3" Margin="1" 
+                                          Click="btnAddSite_Click"  />
+                    <Label Name="lblControllerType" Content="Controller type:" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Row="3" />
+                    <ComboBox Name="cmbScpType" Grid.Row="4" Margin="10,0,0,0" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" 
+                                          ItemsSource="{Binding}" DisplayMemberPath="Name"  />
+                    <Button Name="btnAddControllerOfTheType"  Style="{DynamicResource ibtnAdd}" ToolTip="Add a new Controller"  Height="20" HorizontalAlignment="Left" KeyboardNavigation.TabIndex="3" Margin="1" Grid.Column="1" Grid.Row="6" Click="btnAddControllerOfTheType_Click" />
+                    <Label Name ="lblController" Content="Controller:" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Row="5" />
+                    <ComboBox Name="cmbController" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="200" Grid.Row="6" 
+                                          ItemsSource="{Binding}" 
+                                          DisplayMemberPath="Node.Name" SelectedValuePath="SCP_ID" />
+                    <Label Name="lblIOBoardType" Content="I/O board type:" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Row="7" />
+                    <ComboBox Name="cmbIOBoardType" Grid.Row="8" Height="25" Margin="10,0,0,0" HorizontalAlignment="Left" Width="200"  />
+                    <!--Button Name="btnAddIOBoard" Style="{DynamicResource ibtnAdd}" ToolTip="Add a new IO Board" HorizontalAlignment="Left" KeyboardNavigation.TabIndex="3" Margin="1" Grid.Column="1" Grid.Row="8" Click="btnAddIOBoard_Click"/-->
+                    <Button Name="btnGenerateDoorsGroup" Content="Build" Grid.Row="9" Height="23" HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="130" Click="btnGenerateDoorsGroup_Click" />
+                </Grid>
+            </Border>
+        </Expander>
+        <!--Expander Width="250" Header="DEFAULTS" IsExpanded="True" >
+                        <Border Height="42" Background="WhiteSmoke">
+                            <Button Name="btnSetDefaults" Content="Set Defaults" Height="23"  Width="130" Click="btnSetDefaults_Click" />
+                        </Border>
+        </Expander>
+        <Expander Width="250" Header="TROUBLESHOOTING" IsExpanded="False">
+            <Border Height="50" Background="WhiteSmoke"/>
+        </Expander>
+        <Expander Width="250" Header="TIME SAVERS"  IsExpanded="False">
+            <Border Height="50" Background="WhiteSmoke"/>
+        </Expander>
+        <Expander Width="250" Header="PARTNERS PORTAL LINKS" IsExpanded="False">
+            <Border Height="50" Background="WhiteSmoke"/>
+        </Expander-->
+    </StackPanel>
+</UserControl>

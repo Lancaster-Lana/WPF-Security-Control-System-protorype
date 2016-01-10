@@ -1,0 +1,26 @@
+﻿<Button x:Class="WPFSecurityControlSystem.Controls.ValidationButton"    
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"    
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Button.Template>
+        <ControlTemplate TargetType="{x:Type Button}">
+            <Grid Width="16" Height="16">
+                <Image Name="Normal" Source="/WPFSecurityControlSystem;component/Images/help_hover.png" Visibility="Visible"/>
+                <!--Image Name="Pressed" Source="../Images/help_pressed.png" Visibility="Hidden"/-->
+                <Image Name="Hover" Source="/WPFSecurityControlSystem;component/Images/validation_error.ico" Visibility="Hidden"/>
+                <Image Name="Disabled" Source="/WPFSecurityControlSystem;component/Images/error_disabled.png" Visibility="Hidden"/>
+            </Grid>   
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="Normal" Property="Visibility" Value="Hidden"/>
+                    <Setter TargetName="Hover" Property="Visibility" Value="Hidden"/>                                   
+                    <Setter TargetName="Disabled" Property="Visibility" Value="Visible"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter TargetName="Normal" Property="Visibility" Value="Hidden"/>
+                    <Setter TargetName="Disabled" Property="Visibility" Value="Hidden"/>
+                    <Setter TargetName="Hover" Property="Visibility" Value="Visible"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Button.Template>
+</Button> 

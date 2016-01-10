@@ -1,0 +1,86 @@
+﻿<Window x:Class="WPFSecurityControlSystem.MainWindow" Style="{DynamicResource SkinWindowStyle}"         
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+        Title="PremiSys 3.0 Prototype" Height="600" Width="900" Icon="/WPFSecurityControlSystem;component/Images/PremiSys.ico" >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="RibbonTemplate.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <r:Ribbon Name="MainRibbonMenu" Grid.Row="0" >
+            <r:Ribbon.ApplicationMenu>
+                <r:RibbonApplicationMenu>
+                    <r:RibbonApplicationMenuItem Header="Help"/>
+                </r:RibbonApplicationMenu>
+            </r:Ribbon.ApplicationMenu>
+            <r:RibbonTab Header="Home">
+                <r:RibbonGroup Header="Access Control">
+                    <r:RibbonButton Label="Hardware Configuration" LargeImageSource="/Images/door_conf_32.png" Click="OnHardwareConfigClicked" />
+                    <r:RibbonButton Label="Transaction Monitor" LargeImageSource="/Images/door_info_32.png" />
+                    <r:RibbonButton Label="Alarm Acknowledgment" LargeImageSource="/Images/caution_32.png" />
+                    <r:RibbonSplitButton Label="Photo Recall" LargeImageSource="/Images/camera_32.png" >
+
+                    </r:RibbonSplitButton>
+                    <r:RibbonSplitButton Label="Map(s)" LargeImageSource="/Images/world_32.png">
+
+                    </r:RibbonSplitButton>
+                </r:RibbonGroup>
+                <r:RibbonGroup Header="Cardholder Navigation" >
+                    <r:RibbonButton Label="Navigator" LargeImageSource="/Images/group_32.png" />
+                    <r:RibbonSplitButton Label="New Cardholder" LargeImageSource="/Images/user_add_32.png">
+
+                    </r:RibbonSplitButton>
+                    <r:RibbonButton Label="Search" LargeImageSource="/Images/user_search_32.png" />
+                    <r:RibbonButton Label="Save" LargeImageSource="/Images/user_save_32.png" />
+                    <r:RibbonButton Label="Previous" LargeImageSource="/Images/user_back_32.png" />
+                    <r:RibbonButton Label="Next" LargeImageSource="/Images/user_next_32.png" />
+                </r:RibbonGroup>
+            </r:RibbonTab>
+            <r:RibbonTab Header="Layout" >
+
+            </r:RibbonTab>
+            <r:RibbonTab Header="Data">
+
+            </r:RibbonTab>
+            <r:RibbonTab Header="System">
+                <r:RibbonGroup Header="Security Administration">
+                    <r:RibbonButton Label="User(s)" LargeImageSource="/Images/admin_32.png" />
+                    <r:RibbonButton Label="Time Periods" LargeImageSource="/Images/admin_clock_32.png" />
+                    <r:RibbonButton Label="Cardholder Filters" LargeImageSource="/Images/admin_level_32.png" />
+                    <r:RibbonSplitButton Label="Configuration" SmallImageSource="/Images/admin_conf_32.png">
+                        <r:RibbonSplitButton.Items>
+                            <MenuItem Header="Application Level Authentication" />
+                            <MenuItem Header="Mixed Mode Authentication" />
+                        </r:RibbonSplitButton.Items>
+                    </r:RibbonSplitButton>
+                    <r:RibbonTextBox TextBoxWidth="180" />
+                    <r:RibbonButton Label="Validate" Height="20"  />
+                </r:RibbonGroup>
+                <r:RibbonGroup Header="Scheduler" >
+                    <r:RibbonButton Label="Schedule" LargeImageSource="/Images/calendar_clock_32.png" />
+                </r:RibbonGroup>
+                <r:RibbonGroup Header="License">
+                    <r:RibbonButton Label="License Manager" LargeImageSource="/Images/document_conf_32.png" />
+                </r:RibbonGroup>
+                <r:RibbonGroup Header="Plugin Management">
+
+                </r:RibbonGroup>
+
+            </r:RibbonTab>
+            <r:RibbonTab Header="Reports">
+                <r:RibbonGroup Header="User Journal">
+                    <r:RibbonCheckBox Label="Hardware Configuration"/>
+                    <r:RibbonCheckBox Label="Cardholders" />
+                    <r:RibbonCheckBox Label="Cards" />
+                    <r:RibbonButton Label="Hardware Journal" LargeImageSource="/Images/door_conf_32.png" />
+                    <r:RibbonButton Label="Cardholder Journal" LargeImageSource="/Images/group_32.png" />
+                </r:RibbonGroup>
+            </r:RibbonTab>
+        </r:Ribbon>
+    </Grid>
+</Window>

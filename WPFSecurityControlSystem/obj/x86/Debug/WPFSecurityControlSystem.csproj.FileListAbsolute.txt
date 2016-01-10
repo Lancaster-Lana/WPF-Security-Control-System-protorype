@@ -1,0 +1,81 @@
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\LocalConfigV2.config
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\WPFSecurityControlSystem.exe.config
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\WPFSecurityControlSystem.exe
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\WPFSecurityControlSystem.pdb
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\Controls.WpfUI.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\IDenticard.Access.Common.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\IDenticard.Access.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\IDenticard.AccessUI.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\IDenticard.Common.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\IDenticard.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\IDenticard.LicensingServices.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\IDenticard.Types.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\RibbonControlsLibrary.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\WPFToolkit.Extended.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\GenuineChannels.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\Microsoft.Practices.ObjectBuilder.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\WPFToolkit.dll
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\Controls.WpfUI.pdb
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\Controls.WpfUI.xml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\WPFSecurityControlSystem.csprojResolveAssemblyReference.cache
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\PermissionsControl.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\Search\WpfSearchControl.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\ValidationButton.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MainWindow.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Views\ToolsView.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Themes\HelpButtonTemplate.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\RibbonTemplate.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Themes\Skins\BureauBlack.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Themes\Skins\BureauBlue.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Themes\Skins\ExpressionDark.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Themes\Skins\ExpressionLight.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Themes\Skins\None.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Themes\Skins\ShinyBlue.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Themes\Skins\WhistlerBlue.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\App.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Base\BasePropertiesDialog.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\CardFormatsControl.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\ColumnsPickerControl.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\HolidayControl.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\PermissionsControl.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\Search\WpfSearchControl.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\ValidationButton.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MainWindow.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Controls\DoorPropertiesControl.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Controls\SCPPropertiesControl.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Controls\SetDefaultPropertiesControl.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Controls\SIOPropertiesControl.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Controls\SitePropertiesControl.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\HWConfigurationShell.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Views\NavigationView.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Views\MainContentsView.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Views\ToolsView.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\RibbonTemplate.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Themes\WindowStyle.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\App.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\WPFSecurityControlSystem_Content.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\WPFSecurityControlSystem_MarkupCompile.cache
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\WPFSecurityControlSystem_MarkupCompile.lref
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Base\BasePropertiesDialog.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\CardFormatsControl.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\ColumnsPickerControl.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Controls\HolidayControl.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Controls\DoorPropertiesControl.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Controls\SCPPropertiesControl.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Controls\SetDefaultPropertiesControl.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Controls\SIOPropertiesControl.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Controls\SitePropertiesControl.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\HWConfigurationShell.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Views\NavigationView.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\MODULE (HW) - Hardware\Views\MainContentsView.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\Themes\WindowStyle.baml
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\WPFSecurityControlSystem.g.resources
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\WPFSecurityControlSystem.Properties.Resources.resources
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\WPFSecurityControlSystem.csproj.GenerateResource.Cache
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\WPFSecurityControlSystem.exe
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\obj\x86\Debug\WPFSecurityControlSystem.pdb
+G:\Git Projects\WPF Security Control System protorype\WPFSecurityControlSystem\bin\Microsoft.Windows.Shell.dll
